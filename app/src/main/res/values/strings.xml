@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2013 Wolfram Rittmeyer
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- general stuff -->
+    <string name="cpsample_app_name">ContentProvider Demo</string>
+    <string name="cpsample_userid_label">OpenMinds</string>
+
+    <!-- titles -->
+    <string name="cpsample_title_activity_cpsample">ContentProvider Demo</string>
+    <string name="cpsample_title_activity_about">About</string>
+    <string name="cpsample_title_activity_description">Description</string>
+
+    <!-- Menu/ActionBar items -->
+    <string name="cpsample_menu_description">Demo description</string>
+    <string name="cpsample_menu_add">Add a lent item</string>
+    <string name="cpsample_menu_edit">Edit this lent item</string>
+    <string name="cpsample_menu_delete">Delete this lent item</string>
+    <string name="cpsample_menu_photo">Take a shot of the lent item</string>
+
+    <!-- demo descriptions -->
+    <string name="cpsample_contentprovidersampledemo_desc">
+        <![CDATA[
+        This demo shows how to use Android\'s content providers. It
+        deals with the normal CRUD methods.<br>
+        This demo makes also use of Loaders.
+        ]]>
+    </string>
+
+    <!-- content -->
+    <string name="cpsample_empty">You currently haven\'t lent any items.\n\nYou can add new items by clicking on the plus action button at the top.</string>
+
+    <!-- Detail Views -->
+    <string name="cpsample_txt_label_item">Item</string>
+    <string name="cpsample_txt_label_borrower">Borrower</string>
+    <string name="cpsample_txt_label_photo">Photo</string>
+    <string name="cpsample_txt_photo_description">Photo of Item</string>
+
+    <!-- Permissions -->
+    <string name="cpsample_desc_permission_lentitems_READ">Allows an app to read your lent items</string>
+    <string name="cpsample_desc_permission_lentitems_WRITE">Allows an app to add lent items or modify existing lent items</string>
+    <string name="cpsample_label_permission_lentitems_READ">Reading lent items</string>
+    <string name="cpsample_label_permission_lentitems_WRITE">Adding and Changing lent items</string>
+    
+    <!-- about -->
+    <string name="cpsample_about">About</string>
+    <string name="cpsample_about_text">
+        <![CDATA[
+        <strong>ContentProvider Demo</strong>
+        <br>
+        \u00a9 2013 by Wolfram Rittmeyer
+        <br>
+        <a href="http://www.grokkingandroid.com">http://www.grokkingandroid.com</a>
+        <br><br>
+        You can find the code on the project page:<br>
+        <a href="https://bitbucket.org/grokkingandroid/cpsample">https://bitbucket.org/grokkingandroid/cpsample</a>
+        <br><br>
+        The code is licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache License Version 2.0</a>.
+        <br><br><br>
+        <em><strong>This demo makes use of the following %s:</strong></em>
+        ]]>
+    </string>
+
+    <plurals name="cpsample_libraries_plural">
+        <item quantity="one">library</item>
+        <item quantity="other">libraries</item>
+    </plurals>
+
+    <string-array name="cpsample_about_titles">
+        <item>EventBus</item>
+        <item>Android-Universal-Image-Loader</item>
+        <item>Support Library</item>
+        <item>ActionBarCompat</item>
+    </string-array>
+    <string-array name="cpsample_about_contents">
+        <item>
+<![CDATA[
+            <a href="https://github.com/greenrobot/EventBus">EventBus</a> is a project by 
+            Markus Junginger and greenrobot.
+            <br>
+            The EventBus library makes it easy to achieve communication among loosely
+            coupled components of Android apps.
+            <br>
+            EventBus is licensed under
+            the <a href="http://source.android.com/source/licenses.html">
+            Apache License 2.0</a>.
+            ]]>
+        </item>
+        <item>
+<![CDATA[
+            <a href="https://github.com/nostra13/Android-Universal-Image-Loader">Android-Universal-Image-Loader</a> is a project by 
+            Sergey Tarasevich which he is actively developing together with other contributors.
+            <br>
+            This library helps with loading and caching image data.
+            <br>
+            For a list of contributors see the 
+            <a href="https://github.com/nostra13/Android-Universal-Image-Loader/graphs/contributors">github project 
+            page</a>.
+            <br>
+            Android-Universal-Image_Loader is licensed under
+            the <a href="https://github.com/nostra13/Android-Universal-Image-Loader/blob/master/LICENSE">
+            Apache License 2.0</a>.
+            ]]>
+        </item>
+        <item>
+<![CDATA[
+            The support library is provided by the Android Open Source Project
+            as a standard extension to Android. It helps with backwards
+            compatibility and also offers some additional stuff that is very 
+            useful but hasn\'t yet found its way into the official 
+            Android source.<br><br>
+            The support library is licensed under
+            the <a href="http://source.android.com/source/licenses.html">
+            Apache License 2.0</a>.
+            ]]>
+        </item>
+        <item>
+<![CDATA[
+            ActionBarCompat is provided by the Android Open Source Project
+            as a means to add the ActionBar even if you are targeting
+            older devices.<br><br>
+            ActionBarCompat is licensed under
+            the <a href="http://source.android.com/source/licenses.html">
+            Apache License 2.0</a>.
+            ]]>
+        </item>
+    </string-array>
+
+
+    <!-- Blog links -->
+    <string name="cpsample_demo_description">Demo description</string>
+    <string name="cpsample_blog_links">Blog links</string>
+
+    <string-array name="cpsample_link_texts">
+        <item>Content Provider Basics</item>
+        <item>Writing your own Content provider</item>
+        <item>How to Use Loaders in Android</item>
+    </string-array>
+    <string-array name="cpsample_link_targets">
+        <item>http://www.grokkingandroid.com/android-tutorial-content-provider-basics/</item>
+        <item>http://www.grokkingandroid.com/android-tutorial-writing-your-own-content-provider/</item>
+        <item>http://www.grokkingandroid.com/using-loaders-in-android/</item>
+    </string-array>
+
+</resources>

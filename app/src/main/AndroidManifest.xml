@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2013 Wolfram Rittmeyer
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.grokkingandroid.sampleapp.samples.data.contentprovider"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <permission
+        android:name="de.openminds.samples.cpsample.lentitems.READ"
+        android:description="@string/cpsample_desc_permission_lentitems_READ"
+        android:label="@string/cpsample_label_permission_lentitems_READ"
+        android:protectionLevel="normal" />
+
+    <permission
+        android:name="de.openminds.samples.cpsample.lentitems.WRITE"
+        android:description="@string/cpsample_desc_permission_lentitems_WRITE"
+        android:label="@string/cpsample_label_permission_lentitems_WRITE"
+        android:protectionLevel="normal" />
+    
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    
+    <application
+        android:name=".CPSampleApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/cpsample_app_name"
+        android:theme="@style/DemoAppTheme" >
+        <activity
+            android:name=".lentitems.CPSampleActivity"
+            android:label="@string/cpsample_title_activity_cpsample"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.grokkingandroid.sampleapp.ACTION_START" />
+
+                <data
+                    android:host="grokkingandroid.com"
+                    android:path="/samples/cpsample"
+                    android:scheme="app" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".description.DescriptionActivity"
+            android:label="@string/cpsample_title_activity_description"
+            android:exported="false" />
+
+        <provider
+            android:name=".provider.LentItemsProvider"
+            android:authorities="de.openminds.samples.cpsample.lentitems"
+            android:exported="true"
+            android:grantUriPermissions="true"
+            android:label="LentItemsProvider"
+            android:readPermission="de.openminds.samples.cpsample.lentitems.READ"
+            android:writePermission="de.openminds.samples.cpsample.lentitems.WRITE" >
+        </provider>
+        
+        <service 
+            android:name=".lentitems.LentItemService"
+            android:exported="false" />
+    </application>
+
+</manifest>
